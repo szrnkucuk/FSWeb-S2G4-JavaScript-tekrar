@@ -138,7 +138,7 @@ siralisayilar.sort((a,b) => a-b);
 console.log(siralisayilar);
 
 
-// 3f çözümü
+// 3f çözümü..
 
 for (let rakam of sayilar.toString()){
   if (rakam===undefined){
