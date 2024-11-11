@@ -151,7 +151,7 @@ for (let rakam of sayilar.toString()){
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
-  console.log("Kodlar çalışıyor");
+  console.log("Kodlar çalışıyooor");
   return "as";
 }
 sa();
