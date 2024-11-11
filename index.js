@@ -39,6 +39,7 @@ const sayilar = [
 function KareninAlani(kenaruzunlugu) {
   return kenaruzunlugu * kenaruzunlugu;
 }
+console.log(KareninAlani(10));
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -50,10 +51,11 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  const cevre= 2 * pi * yaricap;
+  return cevre;
 }
-
+console.log(CemberinCevresi(5));
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* 	GÖREV 2:  
@@ -64,9 +66,11 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap,pi) {
+  const alan=pi*Math.pow(yaricap,2)
+  return alan;
 }
+console.log(CemberinAlani(15));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -89,37 +93,60 @@ function CemberinAlani(/* kodlar buraya */) {
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-let ucetambolunenler,
+let 
   enkucuk,
   enbuyuk,
-  ucebolunenlerintoplami,
-  besyuzdenkucuksayilar,
-  siralisayilar,
   tekraredensayilar;
 
 // 3a çözümü
 
-/* kodlar buraya */
+enbuyuk=sayilar[0];
+for (let i=1; i<sayilar.length;i++){
+  if (sayilar[i]>enbuyuk){
+    enbuyuk=sayilar[i];
+  }
+}
+enkucuk=sayilar[0];
+for (let i=1; i<sayilar.length;i++){
+  if (sayilar[i]<enkucuk){
+    enkucuk=sayilar[i];
+  }
+}
+
+
+
 
 // 3b çözümü:
 
-/* kodlar buraya */
+const ucetambolunenler= sayilar.forEach(n => {
+  if (n % 3 === 0) console.log(n);
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
+const ucebolunenlerintoplami=ucetambolunenler.reduce((toplam,yeni) => toplam+yeni,0);
 
 // 3d çözümü
 
-/* kodlar buraya */
+const kucuksayilar = ((sayi) => sayi<500);
+const besyuzdenkucuksayilar=kucuksayilar.filter(besyuzdenkucuksayilar);
 
 // 3e çözümü
 
-/* kodlar buraya */
+const siralisayilar=[...sayilar];
+siralisayilar.sort((a,b) => a-b);
+console.log(siralisayilar);
+
 
 // 3f çözümü
 
-/* kodlar buraya */
+for (let rakam of sayilar.toString()){
+  if (rakam===undefined){
+    rakam=1;
+  } else {
+    rakam++;
+  }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
